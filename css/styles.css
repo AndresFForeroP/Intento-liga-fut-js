@@ -1,12 +1,22 @@
 :root{
-    --primercolor: rgb(146, 218, 112);
-    --segundocolor: rgb(252, 125, 125);
-    --tercercolor: rgba(0, 183, 255, 0.411);
+    --primercolor: rgb(144, 243, 243);
+    --segundocolor: rgb(252, 125, 125, 0.9);
+    --tercercolor: rgba(0, 183, 255, 0.8);
     --cuartocolor: rgba(44, 46, 48, 0.411);
     --quintocolor: rgba(214, 143, 255, 0.411);
 }
+.material-symbols-outlined {
+    margin-top: 0.2rem;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
 *{
     font-family: "Tagesschrift", system-ui;
+    color: white;
+    text-shadow: 1px 1px black;
 }
 body{
     background-image: url(/img/fondopagina.jpeg);
@@ -26,29 +36,59 @@ section{
     }
     .botones{
         display: grid;
-        grid-template-columns: repeat(5,20%);
-        margin: 3rem;
+        grid-template-columns: repeat(2,10rem);
+        margin: 42%;
+        margin-top: 4rem;
         button{
             width: 8rem;
             border-radius: 0.5rem;
             font-size: 1.2rem;
         }
         button:nth-child(1){
-            background-color: var(--primercolor);    
+            background-color: var(--tercercolor); 
         }
         button:nth-child(2){
-            background-color: var(--tercercolor);    
-        }
-        button:nth-child(3){
-            background-color: var(--cuartocolor);    
-        }
-        button:nth-child(4){
             background-color: var(--segundocolor);    
         }
-        button:nth-child(5){
-            background-color: var(--quintocolor);    
+    }
+    .sin-equipos{
+        border-radius: 1.5rem;
+        margin-top: 2rem;
+        background-color: rgba(66, 66, 66, 0.7);
+        margin: auto;
+        text-align: center;
+        font-size: 2rem;
+        width: 20rem;
+    }
+    .equipos{
+        margin-top: 1rem;
+        margin-left: 1rem;
+        border-radius: 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(6,16.67%);
+        background:
+        rgba(66, 66, 66, 0.7);
+        p{
+            font-size: 1rem;
+            text-align: center;
+            margin: 1rem;
+            margin-left: 1rem;
+            span{
+                font-size: 1.3rem;
+            }
+        }
+        button{
+            margin: auto;
+        }
+        .boton-eliminar{
+            background-color: var(--segundocolor);
+        }
+        .boton-editar{
+            margin-right: -1.7rem;
+            background-color: var(--tercercolor);
+        }
+        strong{
+            color:var(--primercolor);
         }
     }
 }
-
-
