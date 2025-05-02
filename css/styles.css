@@ -1,0 +1,54 @@
+:root{
+    --primercolor: rgb(146, 218, 112);
+    --segundocolor: rgb(252, 125, 125);
+    --tercercolor: rgba(0, 183, 255, 0.411);
+    --cuartocolor: rgba(44, 46, 48, 0.411);
+    --quintocolor: rgba(214, 143, 255, 0.411);
+}
+*{
+    font-family: "Tagesschrift", system-ui;
+}
+body{
+    background-image: url(/img/fondopagina.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header{
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 400;
+}
+section{
+    .h-lista{
+        font-size: 1.8rem;
+        font-weight: 300;
+        text-align: center;
+    }
+    .botones{
+        display: grid;
+        grid-template-columns: repeat(5,20%);
+        margin: 3rem;
+        button{
+            width: 8rem;
+            border-radius: 0.5rem;
+            font-size: 1.2rem;
+        }
+        button:nth-child(1){
+            background-color: var(--primercolor);    
+        }
+        button:nth-child(2){
+            background-color: var(--tercercolor);    
+        }
+        button:nth-child(3){
+            background-color: var(--cuartocolor);    
+        }
+        button:nth-child(4){
+            background-color: var(--segundocolor);    
+        }
+        button:nth-child(5){
+            background-color: var(--quintocolor);    
+        }
+    }
+}
+
+
