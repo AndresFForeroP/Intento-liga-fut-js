@@ -5,8 +5,7 @@ const btn_vaciar = document.querySelector("#btn-vaciar")
 const btn_nuevo = document.querySelector("#btn-nuevo")
 let listaEquipos = [];
 listaEquipos.push(Nuevo_equipo("argentina","messi"))
-div_listaequipos.innerHTML = mostrar_equipos(listaEquipos)
-console.log(mostrar_equipos(listaEquipos))
+customElements.define(`equipos`,Micomponente)
 btn_vaciar.addEventListener("click",(e) =>{
     Swal.fire({
         title: "Desea eliminar todos los equipos?",
