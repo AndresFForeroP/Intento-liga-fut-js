@@ -39,25 +39,3 @@ export const mostrar_equipos = (listaEquipos) =>{
     }
     return datos_equipos
 }
-export class Micomponente extends HTMLElement {
-    constructor(){
-        super();
-        this.attachShadow({mode:"open"});
-        this.shadowRoot.innerHTML = '<h1>hola mundo</h1>'
-    }
-    connectedCallBack(){
-        listaEquipos.forEach(equipo => {
-            this.shadowRoot.innerHTML += `<div class="equipos">
-                <p><strong>NOMBRE EQUIPO</strong> <br>
-                ${equipo.nombre}</p>
-                <p><strong>DIRECTOR TECNICO</strong> <br>
-                ${equipo.DT}</p>
-                <p><strong>CUERPO MEDICO</strong> <br>
-                <span>${equipo.CM.length}</span></p>
-                <p><strong>JUGADORES</strong> <br><br>
-                <span>${equipo.jugadores.length}</span></p>
-                <button class="boton-editar"><span class="material-symbols-outlined">edit</span></button>
-                <button id="btn-eliminar-${equipo.nombre}" class="boton-eliminar"><span class="material-symbols-outlined">delete</span></button>
-            </div>`})
-    }    
-}
